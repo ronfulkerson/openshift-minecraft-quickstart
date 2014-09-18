@@ -1,7 +1,7 @@
-openshift-craftbukkit-quickstart
+openshift-minecraft-quickstart
 ================================
 
-A quickstart Minecraft (Craftbukkit) server that will automatically download latest craftbukkit development build 
+A Minecraft quickstart that will automatically download the server 
 and start it.
 
 Create the Openshift DIY Application
@@ -10,14 +10,14 @@ Create the Openshift DIY Application
 1. Create a DIY application using this git repo as source code:
 
    ```bash
-   $ rhc app-create craftbukkit diy --from-code=git://github.com/jyeary/openshift-craftbukkit-quickstart.git
+   $ rhc app-create mc diy --from-code=git://github.com/ronfulkerson/openshift-minecraft-quickstart.git
    ```
 
 2. Create a port-forward from your local machine to your remote server:
 
 
    ```bash
-   $ rhc port-forward craftbukkit
+   $ rhc port-forward mc
    Checking available ports ... done
    Forwarding ports ...
 
@@ -52,7 +52,7 @@ You will need at least one player to act as the administrator. In order to do th
    ```bash
    $ nano
    $ cat ops.txt
-   syeary
+   ronfulkerson
    ```
 4. stop and start the gear. I have found restart does not work very well.
    
@@ -64,7 +64,7 @@ You will need at least one player to act as the administrator. In order to do th
    Starting gear...
    Starting DIY cartridge
    + cd /var/lib/openshift/52bc4398e0b8cded36000038/app-root/data/
-   + nohup java -jar craftbukkit-dev.jar -h 127.8.212.1 --noconsole
+   + nohup java -jar minecraft_server.1.8.jar -h 127.8.212.1 nogui
    ```
 
 Reference
