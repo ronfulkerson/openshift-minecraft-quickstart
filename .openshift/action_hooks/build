@@ -1,12 +1,12 @@
 #!/bin/bash
 SERVER_PROPERTIES=server.properties
-CRAFTBUKKIT_SERVER_JAR=craftbukkit-dev.jar
+MINECRAFT_SERVER_JAR=minecraft_server.jar
 
 set -x 
 
 cd $OPENSHIFT_DATA_DIR
 
-if [ ! -e "$CRAFTBUKKIT_SERVER_JAR" ]; then
-	wget "http://dl.bukkit.org/downloads/craftbukkit/get/latest/craftbukkit-dev.jar" -O $CRAFTBUKKIT_SERVER_JAR
+if [ ! -e "$MINECRAFT_SERVER_JAR" ]; then
+	wget "https://s3.amazonaws.com/Minecraft.Download/versions/1.8/minecraft_server.1.8.jar" -O $MINECRAFT_SERVER_JAR
 fi
 
